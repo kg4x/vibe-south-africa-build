@@ -1,146 +1,87 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  Users, 
-  Award, 
-  MapPin, 
-  Calendar,
-  Target,
-  Heart,
-  Shield,
-  Star,
-  ArrowRight,
-  CheckCircle
-} from 'lucide-react';
+import { Users, Award, MapPin, Calendar, Target, Heart, Shield, Star, ArrowRight, CheckCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { SEO } from '@/components/SEO';
-
 const About = () => {
-  const milestones = [
-    {
-      year: "2017",
-      title: "VMA Events Founded",
-      description: "Started with a vision to transform South African workplaces through innovative team building."
-    },
-    {
-      year: "2018",
-      title: "100+ Companies Served",
-      description: "Reached our first major milestone, serving over 100 companies across Gauteng."
-    },
-    {
-      year: "2019",
-      title: "National Expansion",
-      description: "Expanded operations to Cape Town, Durban, and other major South African cities."
-    },
-    {
-      year: "2020",
-      title: "Virtual Solutions",
-      description: "Adapted to remote work with innovative virtual team building solutions during COVID-19."
-    },
-    {
-      year: "2021",
-      title: "500+ Companies",
-      description: "Celebrated serving over 500 companies with 98% client satisfaction rate."
-    },
-    {
-      year: "2024",
-      title: "Industry Leaders",
-      description: "Recognized as South Africa's premier team building company with 2000+ events delivered."
-    }
-  ];
-
-  const values = [
-    {
-      title: "Excellence",
-      description: "We strive for excellence in every aspect of our service delivery, from initial consultation to post-event follow-up.",
-      icon: Award
-    },
-    {
-      title: "Innovation",
-      description: "We continuously develop new and creative approaches to team building that engage and inspire participants.",
-      icon: Target
-    },
-    {
-      title: "Integrity",
-      description: "We operate with complete transparency and honesty, building trust with our clients and partners.",
-      icon: Shield
-    },
-    {
-      title: "Impact",
-      description: "We focus on creating lasting positive change in team dynamics and organizational culture.",
-      icon: Heart
-    }
-  ];
-
-  const team = [
-    {
-      name: "Vusi Mthembu",
-      role: "Founder & CEO",
-      description: "With over 15 years in corporate training and development, Vusi founded VMA Events to bridge the gap between team building theory and practical results.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
-    },
-    {
-      name: "Michelle Adams",
-      role: "Head of Operations",
-      description: "Michelle ensures flawless execution of every event, bringing 12 years of event management experience to the team.",
-      image: "https://images.unsplash.com/photo-1494790108755-2616b9b1b2c2?w=300&h=300&fit=crop"
-    },
-    {
-      name: "Themba Nkomo",
-      role: "Lead Facilitator",
-      description: "Themba's dynamic facilitation style and expertise in group dynamics makes every VMA Events experience memorable and impactful.",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop"
-    }
-  ];
-
-  const achievements = [
-    {
-      title: "Industry Recognition",
-      items: [
-        "Top Team Building Company - SA Business Awards 2023",
-        "Excellence in Corporate Training - Training Awards 2022",
-        "Innovation in Team Development - HR Excellence Awards 2021"
-      ]
-    },
-    {
-      title: "Client Success",
-      items: [
-        "98% Client Satisfaction Rate",
-        "95% Client Retention Rate",
-        "500+ Corporate Clients Served",
-        "2000+ Successful Events Delivered"
-      ]
-    },
-    {
-      title: "Community Impact",
-      items: [
-        "R2M+ Economic Impact in Local Communities",
-        "50+ Local Suppliers and Partners",
-        "Environmental Sustainability Program",
-        "Corporate Social Responsibility Initiatives"
-      ]
-    }
-  ];
-
-  return (
-    <>
-      <SEO 
-        title="About VMA Events - South Africa's Premier Team Building Company | Est. 2017"
-        description="Learn about VMA Events' journey from 2017 to becoming South Africa's leading team building company. Discover our values, team, and commitment to transforming workplaces."
-        url="/about"
-      />
+  const milestones = [{
+    year: "2017",
+    title: "VMA Events Founded",
+    description: "Started with a vision to transform South African workplaces through innovative team building."
+  }, {
+    year: "2018",
+    title: "100+ Companies Served",
+    description: "Reached our first major milestone, serving over 100 companies across Gauteng."
+  }, {
+    year: "2019",
+    title: "National Expansion",
+    description: "Expanded operations to Cape Town, Durban, and other major South African cities."
+  }, {
+    year: "2020",
+    title: "Virtual Solutions",
+    description: "Adapted to remote work with innovative virtual team building solutions during COVID-19."
+  }, {
+    year: "2021",
+    title: "500+ Companies",
+    description: "Celebrated serving over 500 companies with 98% client satisfaction rate."
+  }, {
+    year: "2024",
+    title: "Industry Leaders",
+    description: "Recognized as South Africa's premier team building company with 2000+ events delivered."
+  }];
+  const values = [{
+    title: "Excellence",
+    description: "We strive for excellence in every aspect of our service delivery, from initial consultation to post-event follow-up.",
+    icon: Award
+  }, {
+    title: "Innovation",
+    description: "We continuously develop new and creative approaches to team building that engage and inspire participants.",
+    icon: Target
+  }, {
+    title: "Integrity",
+    description: "We operate with complete transparency and honesty, building trust with our clients and partners.",
+    icon: Shield
+  }, {
+    title: "Impact",
+    description: "We focus on creating lasting positive change in team dynamics and organizational culture.",
+    icon: Heart
+  }];
+  const team = [{
+    name: "Vusi Mthembu",
+    role: "Founder & CEO",
+    description: "With over 15 years in corporate training and development, Vusi founded VMA Events to bridge the gap between team building theory and practical results.",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop"
+  }, {
+    name: "Michelle Adams",
+    role: "Head of Operations",
+    description: "Michelle ensures flawless execution of every event, bringing 12 years of event management experience to the team.",
+    image: "https://images.unsplash.com/photo-1494790108755-2616b9b1b2c2?w=300&h=300&fit=crop"
+  }, {
+    name: "Themba Nkomo",
+    role: "Lead Facilitator",
+    description: "Themba's dynamic facilitation style and expertise in group dynamics makes every VMA Events experience memorable and impactful.",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=300&h=300&fit=crop"
+  }];
+  const achievements = [{
+    title: "Industry Recognition",
+    items: ["Top Team Building Company - SA Business Awards 2023", "Excellence in Corporate Training - Training Awards 2022", "Innovation in Team Development - HR Excellence Awards 2021"]
+  }, {
+    title: "Client Success",
+    items: ["98% Client Satisfaction Rate", "95% Client Retention Rate", "500+ Corporate Clients Served", "2000+ Successful Events Delivered"]
+  }, {
+    title: "Community Impact",
+    items: ["R2M+ Economic Impact in Local Communities", "50+ Local Suppliers and Partners", "Environmental Sustainability Program", "Corporate Social Responsibility Initiatives"]
+  }];
+  return <>
+      <SEO title="About VMA Events - South Africa's Premier Team Building Company | Est. 2017" description="Learn about VMA Events' journey from 2017 to becoming South Africa's leading team building company. Discover our values, team, and commitment to transforming workplaces." url="/about" />
 
       {/* Hero Section */}
       <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-orange to-brand-yellow opacity-10"></div>
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
-          style={{
-            backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop')"
-          }}
-        ></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20" style={{
+        backgroundImage: "url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1920&h=1080&fit=crop')"
+      }}></div>
         
         <div className="relative container-custom">
           <div className="max-w-4xl mx-auto text-center">
@@ -187,12 +128,7 @@ const About = () => {
                   were struggling with team cohesion, communication barriers, and low employee 
                   engagement. Traditional team building approaches weren't delivering lasting results.
                 </p>
-                <p>
-                  Founded in 2017 by Vusi Mthembu, a seasoned corporate trainer and development 
-                  specialist, VMA Events set out to revolutionize team building in South Africa. 
-                  We combined adventure-based learning with proven corporate training methodologies 
-                  to create experiences that truly transform teams.
-                </p>
+                <p>Founded in 2017 by Kgatlhego Moeng, a seasoned corporate trainer and development specialist, VMA Events set out to revolutionize team building in South Africa. We combined adventure-based learning with proven corporate training methodologies to create experiences that truly transform teams.</p>
                 <p>
                   Today, we're proud to be South Africa's premier team building company, having 
                   served over 500 companies and delivered more than 2000 successful events. 
@@ -210,11 +146,7 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <img 
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" 
-                alt="VMA Events team building activity"
-                className="rounded-2xl shadow-2xl"
-              />
+              <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop" alt="VMA Events team building activity" className="rounded-2xl shadow-2xl" />
               <div className="absolute -bottom-6 -right-6 bg-brand-orange text-white p-6 rounded-2xl shadow-lg">
                 <div className="text-center">
                   <div className="text-3xl font-bold">7+</div>
@@ -239,8 +171,7 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="card-hover border-0 shadow-lg text-center">
+            {values.map((value, index) => <Card key={index} className="card-hover border-0 shadow-lg text-center">
                 <CardContent className="p-8">
                   <div className="w-16 h-16 bg-gradient-to-br from-brand-orange to-brand-yellow rounded-full flex items-center justify-center mx-auto mb-6">
                     <value.icon size={28} className="text-white" />
@@ -252,8 +183,7 @@ const About = () => {
                     {value.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -274,8 +204,7 @@ const About = () => {
           <div className="relative">
             <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-brand-orange"></div>
             <div className="space-y-12">
-              {milestones.map((milestone, index) => (
-                <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
+              {milestones.map((milestone, index) => <div key={index} className={`flex items-center ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
                   <div className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8'}`}>
                     <Card className="card-hover border-0 shadow-lg">
                       <CardContent className="p-6">
@@ -293,8 +222,7 @@ const About = () => {
                   </div>
                   <div className="w-4 h-4 bg-brand-orange rounded-full relative z-10 border-4 border-white shadow-lg"></div>
                   <div className="w-1/2"></div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
         </div>
@@ -314,14 +242,9 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card key={index} className="card-hover border-0 shadow-lg overflow-hidden">
+            {team.map((member, index) => <Card key={index} className="card-hover border-0 shadow-lg overflow-hidden">
                 <div className="aspect-square relative overflow-hidden">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-                  />
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover transition-transform duration-300 hover:scale-105" />
                 </div>
                 <CardContent className="p-6 text-center">
                   <h3 className="text-xl font-heading font-semibold mb-2 text-gray-900">
@@ -334,8 +257,7 @@ const About = () => {
                     {member.description}
                   </p>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -354,23 +276,19 @@ const About = () => {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {achievements.map((category, index) => (
-              <Card key={index} className="border-0 shadow-lg">
+            {achievements.map((category, index) => <Card key={index} className="border-0 shadow-lg">
                 <CardContent className="p-8">
                   <h3 className="text-xl font-heading font-semibold mb-6 text-gray-900 text-center">
                     {category.title}
                   </h3>
                   <ul className="space-y-3">
-                    {category.items.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-start space-x-3">
+                    {category.items.map((item, itemIndex) => <li key={itemIndex} className="flex items-start space-x-3">
                         <CheckCircle size={16} className="text-green-500 mt-1 flex-shrink-0" />
                         <span className="text-gray-600">{item}</span>
-                      </li>
-                    ))}
+                      </li>)}
                   </ul>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -400,8 +318,6 @@ const About = () => {
           </div>
         </div>
       </section>
-    </>
-  );
+    </>;
 };
-
 export default About;
