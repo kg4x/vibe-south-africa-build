@@ -1,43 +1,11 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { 
-  MapPin, 
-  Phone, 
-  Mail, 
-  Facebook, 
-  Instagram, 
-  Linkedin,
-  Twitter,
-  ArrowRight,
-  Award,
-  Users,
-  Calendar
-} from 'lucide-react';
-
+import { MapPin, Phone, Mail, Facebook, Instagram, Linkedin, Twitter, ArrowRight, Award, Users, Calendar } from 'lucide-react';
 export const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
-
-  const services = [
-    'Adventure Team Building',
-    'Corporate Workshops',
-    'Leadership Development',
-    'Problem Solving Activities',
-    'Communication Exercises',
-    'Trust Building Games'
-  ];
-
-  const locations = [
-    'Johannesburg',
-    'Cape Town',
-    'Durban',
-    'Pretoria',
-    'Port Elizabeth',
-    'Bloemfontein'
-  ];
-
-  return (
-    <footer className="bg-gray-900 text-white">
+  const services = ['Adventure Team Building', 'Corporate Workshops', 'Leadership Development', 'Problem Solving Activities', 'Communication Exercises', 'Trust Building Games'];
+  const locations = ['Johannesburg', 'Cape Town', 'Durban', 'Pretoria', 'Port Elizabeth', 'Bloemfontein'];
+  return <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
       <div className="container-custom section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -58,40 +26,16 @@ export const Footer: React.FC = () => {
                 that strengthen teams and drive business success since 2017.
               </p>
               <div className="flex space-x-4">
-                <a 
-                  href="https://facebook.com/vmaevents" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200"
-                  aria-label="Facebook"
-                >
+                <a href="https://facebook.com/vmaevents" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200" aria-label="Facebook">
                   <Facebook size={18} />
                 </a>
-                <a 
-                  href="https://instagram.com/vmaevents" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200"
-                  aria-label="Instagram"
-                >
+                <a href="https://instagram.com/vmaevents" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200" aria-label="Instagram">
                   <Instagram size={18} />
                 </a>
-                <a 
-                  href="https://linkedin.com/company/vmaevents" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200"
-                  aria-label="LinkedIn"
-                >
+                <a href="https://linkedin.com/company/vmaevents" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200" aria-label="LinkedIn">
                   <Linkedin size={18} />
                 </a>
-                <a 
-                  href="https://twitter.com/vmaevents" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200"
-                  aria-label="Twitter"
-                >
+                <a href="https://twitter.com/vmaevents" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200" aria-label="Twitter">
                   <Twitter size={18} />
                 </a>
               </div>
@@ -102,17 +46,12 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="font-heading font-semibold text-lg mb-6">Our Services</h3>
             <ul className="space-y-3">
-              {services.map((service, index) => (
-                <li key={index}>
-                  <Link 
-                    to="/services" 
-                    className="text-gray-300 hover:text-brand-orange transition-colors duration-200 flex items-center group"
-                  >
+              {services.map((service, index) => <li key={index}>
+                  <Link to="/services" className="text-gray-300 hover:text-brand-orange transition-colors duration-200 flex items-center group">
                     <ArrowRight size={14} className="mr-2 group-hover:translate-x-1 transition-transform duration-200" />
                     {service}
                   </Link>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
 
@@ -120,12 +59,10 @@ export const Footer: React.FC = () => {
           <div>
             <h3 className="font-heading font-semibold text-lg mb-6">Service Areas</h3>
             <ul className="space-y-3">
-              {locations.map((location, index) => (
-                <li key={index} className="text-gray-300 flex items-center">
+              {locations.map((location, index) => <li key={index} className="text-gray-300 flex items-center">
                   <MapPin size={14} className="mr-2 text-brand-orange" />
                   {location}
-                </li>
-              ))}
+                </li>)}
             </ul>
             <div className="mt-6 p-4 bg-gray-800 rounded-lg">
               <p className="text-sm text-gray-300">
@@ -150,7 +87,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <Phone size={18} className="text-brand-orange" />
                 <div>
-                  <p className="text-white font-medium">+27 11 555 0123</p>
+                  <p className="text-white font-medium">+27 65 995 0113</p>
                   <p className="text-sm text-gray-400">Mon-Fri 8AM-6PM</p>
                 </div>
               </div>
@@ -207,6 +144,5 @@ export const Footer: React.FC = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
