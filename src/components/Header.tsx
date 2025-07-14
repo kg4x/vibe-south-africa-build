@@ -1,45 +1,47 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
-
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
-
-  const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'About', href: '/about' },
-    { name: 'Services', href: '/services' },
-    { name: 'Gallery', href: '/gallery' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' },
-  ];
-
+  const navigation = [{
+    name: 'Home',
+    href: '/'
+  }, {
+    name: 'About',
+    href: '/about'
+  }, {
+    name: 'Services',
+    href: '/services'
+  }, {
+    name: 'Gallery',
+    href: '/gallery'
+  }, {
+    name: 'Blog',
+    href: '/blog'
+  }, {
+    name: 'Contact',
+    href: '/contact'
+  }];
   const isActiveLink = (href: string) => {
     if (href === '/') {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(href);
   };
-
-  return (
-    <>
+  return <>
       {/* Top Bar */}
       <div className="bg-gray-900 text-white py-2 hidden md:block">
         <div className="container-custom">
@@ -47,11 +49,11 @@ export const Header: React.FC = () => {
             <div className="flex items-center space-x-4">
               <div className="flex items-center space-x-2">
                 <Phone size={14} />
-                <span>+27 11 555 0123</span>
+                <span>+27 65 995 0113</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={14} />
-                <span>info@vmaevents.co.za</span>
+                <span>vmaevents1@gmail.com</span>
               </div>
             </div>
             <div className="text-brand-orange font-medium">
@@ -62,9 +64,7 @@ export const Header: React.FC = () => {
       </div>
 
       {/* Main Header */}
-      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
-      }`}>
+      <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'}`}>
         <div className="container-custom">
           <div className="flex items-center justify-between h-16 lg:h-20">
             {/* Logo */}
@@ -84,19 +84,9 @@ export const Header: React.FC = () => {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`font-medium transition-colors duration-200 ${
-                    isActiveLink(item.href)
-                      ? 'text-brand-orange'
-                      : 'text-gray-700 hover:text-brand-orange'
-                  }`}
-                >
+              {navigation.map(item => <Link key={item.name} to={item.href} className={`font-medium transition-colors duration-200 ${isActiveLink(item.href) ? 'text-brand-orange' : 'text-gray-700 hover:text-brand-orange'}`}>
                   {item.name}
-                </Link>
-              ))}
+                </Link>)}
             </nav>
 
             {/* CTA Button & Mobile Menu */}
@@ -106,13 +96,7 @@ export const Header: React.FC = () => {
               </Button>
               
               {/* Mobile menu button */}
-              <Button
-                variant="ghost"
-                size="sm"
-                className="lg:hidden"
-                onClick={() => setIsOpen(!isOpen)}
-                aria-label="Toggle menu"
-              >
+              <Button variant="ghost" size="sm" className="lg:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">
                 {isOpen ? <X size={24} /> : <Menu size={24} />}
               </Button>
             </div>
@@ -120,31 +104,18 @@ export const Header: React.FC = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="lg:hidden bg-white border-t shadow-lg">
+        {isOpen && <div className="lg:hidden bg-white border-t shadow-lg">
             <div className="container-custom py-4">
               <nav className="flex flex-col space-y-4">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`font-medium py-2 transition-colors duration-200 ${
-                      isActiveLink(item.href)
-                        ? 'text-brand-orange'
-                        : 'text-gray-700'
-                    }`}
-                  >
+                {navigation.map(item => <Link key={item.name} to={item.href} className={`font-medium py-2 transition-colors duration-200 ${isActiveLink(item.href) ? 'text-brand-orange' : 'text-gray-700'}`}>
                     {item.name}
-                  </Link>
-                ))}
+                  </Link>)}
                 <Button asChild className="btn-primary mt-4 w-full">
                   <Link to="/contact">Get Quote</Link>
                 </Button>
               </nav>
             </div>
-          </div>
-        )}
+          </div>}
       </header>
-    </>
-  );
+    </>;
 };
