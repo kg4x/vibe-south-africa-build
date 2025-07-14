@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { 
   Phone, 
@@ -71,16 +70,16 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      content: "+27 11 555 0123",
+      content: "+27 65 995 0113",
       description: "Mon-Fri 8AM-6PM, Sat 9AM-2PM",
-      action: "tel:+27115550123"
+      action: "tel:+27659950113"
     },
     {
       icon: Mail,
       title: "Email Us",
-      content: "info@vmaevents.co.za",
+      content: "vmaevents1@gmail.com",
       description: "24/7 email support",
-      action: "mailto:info@vmaevents.co.za"
+      action: "mailto:vmaevents1@gmail.com"
     },
     {
       icon: MapPin,
@@ -92,9 +91,9 @@ const Contact = () => {
     {
       icon: MessageSquare,
       title: "WhatsApp",
-      content: "+27 82 555 0123",
+      content: "+27 65 995 0113",
       description: "Quick responses 8AM-8PM",
-      action: "https://wa.me/27825550123"
+      action: "https://wa.me/27659950113"
     }
   ];
 

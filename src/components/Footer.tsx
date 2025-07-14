@@ -22,8 +22,8 @@ export const Footer: React.FC = () => {
                 </div>
               </div>
               <p className="text-gray-300 leading-relaxed mb-6">
-                South Africa's premier team building company, creating unforgettable experiences 
-                that strengthen teams and drive business success since 2017.
+                South Africa's premier team building company, founded by Kgatlhego Moeng. 
+                Creating unforgettable experiences that strengthen teams and drive business success since 2017.
               </p>
               <div className="flex space-x-4">
                 <a href="https://facebook.com/vmaevents" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-brand-orange transition-colors duration-200" aria-label="Facebook">
@@ -95,7 +95,7 @@ export const Footer: React.FC = () => {
               <div className="flex items-center space-x-3">
                 <Mail size={18} className="text-brand-orange" />
                 <div>
-                  <p className="text-white font-medium">info@vmaevents.co.za</p>
+                  <p className="text-white font-medium">vmaevents1@gmail.com</p>
                   <p className="text-sm text-gray-400">24/7 Response</p>
                 </div>
               </div>

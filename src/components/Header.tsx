@@ -2,10 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 export const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -13,9 +15,11 @@ export const Header: React.FC = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
   useEffect(() => {
     setIsOpen(false);
   }, [location]);
+
   const navigation = [{
     name: 'Home',
     href: '/'
@@ -35,13 +39,16 @@ export const Header: React.FC = () => {
     name: 'Contact',
     href: '/contact'
   }];
+
   const isActiveLink = (href: string) => {
     if (href === '/') {
       return location.pathname === '/';
     }
     return location.pathname.startsWith(href);
   };
-  return <>
+
+  return (
+    <>
       {/* Top Bar */}
       <div className="bg-gray-900 text-white py-2 hidden md:block">
         <div className="container-custom">
@@ -117,5 +124,6 @@ export const Header: React.FC = () => {
             </div>
           </div>}
       </header>
-    </>;
+    </>
+  );
 };
